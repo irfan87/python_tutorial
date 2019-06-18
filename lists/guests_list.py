@@ -1,10 +1,11 @@
-guests_list = ['ivy', 'abe e', 'emi', 'kak ju', 'abe di', 'danial', 'nina', 'amanda']
+guests_list = []
 
 # insert the new guest that gonna attend the party!!!
-guests_list.insert(0, 'abe mey')
-guests_list.insert(1, 'abe ja')
-guests_list.insert(2, 'papa')
-guests_list.insert(3, 'mama')
+guests_list.insert(0, 'anuar')
+guests_list.insert(1, 'rizal')
+guests_list.insert(2, 'shukri')
+guests_list.insert(3, 'zaleha')
+guests_list.insert(4, 'ivy')
 
 # pop our the guest that cannot attend to the party
 guests_absence_one = guests_list[1]
@@ -14,7 +15,7 @@ guests_list.remove(guests_absence_one)
 guests_list.remove(guests_absence_two)
 
 # replace the new guest to replace the absense guest
-guests_list.append('abe sukimi')
+guests_list.append('sukimi')
 guests_list.append('john')
 
 # send another three guests an invitation
@@ -29,6 +30,7 @@ print(absence_message)
 # send invitation message to the invited guests
 for guest in guests_list:
     invitation_message = f"Hi, {guest.title()}! You are invited to join the dinner party.\n"
+    
     print(invitation_message)
 
 rejection_guest = guests_list.pop(-1)
@@ -41,10 +43,21 @@ if rejection_guest :
 remain_guest_one = guests_list[0]
 remain_guest_two = guests_list[1]
 
-remain_guest_message = f"{remain_guest_one.title()} and {remain_guest_two.title()} are still invited."
+remain_guest_message = f"{remain_guest_one.title()} and {remain_guest_two.title()} are still invited.\n"
+
 print(remain_guest_message)
 
-del guests_absence_one
-del guests_absence_two
+remove_guest_one = guests_list[0]
+remove_guest_two = guests_list[1]
 
-print(guests_list)
+del remove_guest_one
+del remove_guest_two
+
+# sort guests as alphabet
+guests_list.sort()
+
+# show the invited guests
+invited_guests_length = len(guests_list)
+admin_message = f"Invited guests: {invited_guests_length}"
+
+print(admin_message)
