@@ -3,7 +3,6 @@
 # Note: Please don't laugh
 
 # make a list of blackpink songs
-# blackpink_list_songs = ['ddu-du ddu-du', 'playing with fire', "as if it is your last", 'boombayah', 'forever young']
 blackpink_list_songs = []
 print(blackpink_list_songs)
 
