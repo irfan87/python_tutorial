@@ -1,14 +1,11 @@
-# get the even numbers and odd number by using range()
-# even_numbers = list(range(2, 11, 2))
-# odd_numbers = list(range(1, 11, 2))
+numbers = range(1, 21)
 
-# print(even_numbers)
-# print("\n")
-# print(odd_numbers)
+print("even number:".title())
+for number in list(numbers):
+    if(number % 2) == 0:
+        print(number)
 
-numbers = 1
-
-if (numbers % 2) == 0:
-    print(f"{numbers} is even")
-else:
-    print(f"{numbers} is odd")
+print("\nodd numbers:".title())
+for number in list(numbers):
+    if (number % 2) == 1:
+        print(number)
