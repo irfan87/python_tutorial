@@ -3,12 +3,13 @@ our_foods = ('nasi goreng', 'mee goreng', 'bihun goreng', 'mix grill', 'roti can
 
 print("\nBelow is the buffet that we are currently offer:")
 for our_food in list(our_foods):
-    print(our_food.title())
+    print(f"- {our_food.title()}")
 
 # our_foods[0] = 'nasi goreng kampung'
 # print(our_food[0])
 
-food_changes = ('nasi goreng ayam', 'mee soto')
+food_changes = ('nasi goreng', 'mee goreng', 'bihun goreng', 'mix grill', 'roti canai', 'nasi goreng ayam', 'mee soto')
+
 print("\nWe have make a few changes of buffet as below:")
 for food_change in list(food_changes):
-    print(food_change)
+    print(f"- {food_change.title()}")
