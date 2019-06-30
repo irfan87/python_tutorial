@@ -27,12 +27,15 @@ for language in set(favorite_languages.values()):
         print(language.title())
 
 print('\n')
+
 programmers = ['jen', 'phil', 'josh', 'ali', 'abu', 'hassan']
 
 for programmer_name in favorite_languages.keys():
+    fav_language = favorite_languages[programmer_name].title()
+
     if programmer_name in programmers:
-        fav_language = favorite_languages[programmer_name].title()
-        
+        print(f"{programmer_name.title()} love {fav_language.title()}")
+    else:
         print(f"{programmer_name.title()} love {fav_language.title()}")
 
 print("\n")
