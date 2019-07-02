@@ -1,22 +1,13 @@
 favorite_numbers = {
-    'irfan': 15,
-    'james': 20,
-    'ivy': 10,
-    'amanda': 5,
-    'danial': 35
+    'irfan': [15, 5, 20],
+    'james': [20, 10, 1],
+    'ivy': [10, 3, 4],
+    'amanda': [5, 50, 100],
+    'danial': [35, 60, 100]
 }
 
-favorite_num = favorite_numbers['irfan']
-print(f"Irfan favorite number is {str(favorite_num)}")
+for name, numbers in favorite_numbers.items():
+    print(f"\n{name.title()}'s favorite number is: ")
 
-favorite_num = favorite_numbers['james']
-print(f"James favorite number is {str(favorite_num)}")
-
-favorite_num = favorite_numbers['ivy']
-print(f"Ivy favorite number is {str(favorite_num)}")
-
-favorite_num = favorite_numbers['amanda']
-print(f"Amanda favorite number is {str(favorite_num)}")
-
-favorite_num = favorite_numbers['danial']
-print(f"Danial favorite numver is {str(favorite_num)}")
+    for number in numbers:
+        print(f"- {str(number)}")
