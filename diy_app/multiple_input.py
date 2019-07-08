@@ -17,8 +17,7 @@ while get_user_info:
 print("\nBelow is your actual data")
 
 for username, user_response in user_responses.items():
-    # print(f"\nYour name is {username.title()} and your age is {user_response} years old")
-    
+
     if user_response < 3:
         print(f"{username.title()}, {user_response} is an infant")
     elif user_response <= 12:
