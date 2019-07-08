@@ -1,16 +1,33 @@
-# create a first input
-user_input_one = input("\nWhat is your name? ")
-user_input_two = input("\nWhat is your age? ")
+user_responses = {}
 
-user_input_two = int(user_input_two)
+get_user_info = True
 
-if user_input_two <= 10:
-    print("So young")
-elif user_input_two <= 20:
-    print("Teen")
-elif user_input_two <= 40:
-    print("Adult")
-else:
-    print("Senior")
+while get_user_info:
+    user_name = input("\nPlease enter your name: ")
+    user_age = input("\nPlease enter your age: ")
+    user_age = int(user_age)
 
-print(f"\nYour name is {user_input_one.title()} and you are {user_input_two}")
+    user_responses[user_name] = user_age
+
+    user_repeat = input("\nWant to take this questionaire again? (Yes/No) ")
+
+    if  user_repeat == 'no':
+        get_user_info = False
+
+print("\nBelow is your actual data")
+
+for username, user_response in user_responses.items():
+    # print(f"\nYour name is {username.title()} and your age is {user_response} years old")
+    
+    if user_response < 3:
+        print(f"{username.title()}, {user_response} is an infant")
+    elif user_response <= 12:
+        print(f"{username.title()}, {user_response} is a child")
+    elif user_response <= 18:
+        print(f"{username.title()}, {user_response} is a teenager")
+    elif user_response <= 25:
+        print(f"{username.title()}, {user_response} is a young adult")
+    elif user_response <= 40:
+        print(f"{username.title()}, {user_response} is an adult")
+    else:
+        print(f"{username.title()}, {user_response} is an old person")
