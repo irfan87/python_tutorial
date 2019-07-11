@@ -4,6 +4,9 @@ def build_album(artist_name, album_title, tracks=None):
     if tracks:
         album_dict['tracks'] = tracks
 
+    for name, title in album_dict.items():
+        print(f"{name.title()} - {title.title()}")
+
     return album_dict
 
 artist_info_prompt = "Artist Name: "
