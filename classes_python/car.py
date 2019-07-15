@@ -22,6 +22,32 @@ class Car:
     def increment_odometer(self, miles):
         self.odometer_reading += miles
 
+    def fill_gas_tank(self):
+        print(f"This car can fill the gas")
+
+class Battery:
+    def __init__(self, battery_size=75):
+        self.battery_size = battery_size
+
+    def describe_battery(self):
+        print(f"This car has {self.battery_size}-kWh battery")
+
+    def get_range(self):
+        if self.battery_size == 75:
+            range = 260
+        elif self.battery_size == 100:
+            range = 315
+
+        print(f"This car can go about {range} miles on full charge")
+
+class ElectricalCar(Car):
+    def __init__(self, make, model, year):
+        super().__init__(make, model, year)
+        self.battery = Battery()
+
+    def fill_gas_tank(self):
+        print(f"This car can not fill the gas")
+
 car = Car('audi', 'a4', '2019')
 print(car.get_deceptive_name())
 
@@ -30,3 +56,11 @@ car.read_odometer()
 
 car.increment_odometer(100)
 car.read_odometer()
+car.fill_gas_tank()
+
+print("\n")
+tesla_car = ElectricalCar('tesla', 'model s', 2019)
+print(tesla_car.get_deceptive_name())
+tesla_car.battery.describe_battery()
+tesla_car.fill_gas_tank()
+tesla_car.battery.get_range()
