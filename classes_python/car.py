@@ -40,6 +40,13 @@ class Battery:
 
         print(f"This car can go about {range} miles on full charge")
 
+    def battery_upgrade(self):
+        if self.battery_size == 75:
+            self.battery_size = 90
+            print("The battery is using 90 kWh.")
+        else:
+            print("The battery is already upgraded")
+
 class ElectricalCar(Car):
     def __init__(self, make, model, year):
         super().__init__(make, model, year)
@@ -64,3 +71,15 @@ print(tesla_car.get_deceptive_name())
 tesla_car.battery.describe_battery()
 tesla_car.fill_gas_tank()
 tesla_car.battery.get_range()
+
+print("\nMake an electric car and upgrade the battery if needed")
+john_tesla = ElectricalCar('tesla', 'model 2', 2018)
+john_tesla.battery.describe_battery()
+
+print("\nUpgrade battery")
+john_tesla.battery.battery_upgrade()
+john_tesla.battery.describe_battery()
+
+print("\nUpgrade battery status")
+john_tesla.battery.battery_upgrade()
+john_tesla.battery.describe_battery()

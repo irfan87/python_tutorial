@@ -20,6 +20,24 @@ class User:
     def reset_login_attempts(self):
         self.login_attempts = 0
 
+class Admin(User):
+    def __init__(self, first_name, last_name, age, job_title):
+        super().__init__(first_name, last_name, age, job_title)
+        self.privileges = Privileges()
+
+class Privileges():
+    def __init__(self, privileges=[]):
+        self.privileges = privileges
+
+    def show_privilege(self):
+        
+        if self.privileges:
+            print("You have the privileges as below")
+            for privilege in self.privileges:
+                print(privilege)
+        else:
+            print("No privileges for this user")
+
 user = User('ahmad irfan', 'mohammad shukri', 32, 'programmer')
 print(user.first_name)
 print(user.last_name)
@@ -39,3 +57,13 @@ print(f"You have attempt to login in {user.login_attempts} times")
 print("\nReset login attempt")
 user.reset_login_attempts()
 print(f"Reset to {user.login_attempts}")
+
+print("\nAdmin")
+irfan = Admin("ahmad irfan", "mohammad shukri", 32, "programmer")
+irfan.describe_user()
+
+irfan.privileges.show_privilege()
+print("\nAdding privilege...")
+irfan_privileges = ['can ban', 'can reset password', 'can suspend accounts']
+irfan.privileges.privileges = irfan_privileges
+irfan.privileges.show_privilege()
