@@ -1,0 +1,3 @@
+In Python, you can make a interactive GUI application.
+In Python, you can make an automation test.
+In Python, you can make an awesome website using it's framework!
