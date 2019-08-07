@@ -1,4 +1,8 @@
-filename = '/Users/nerve2009/Desktop/python_projects/python_crash_course/file_and_exceptions/pi_millions_digits.txt'
+import os
+
+filename = os.path.abspath("file_and_exceptions/pi_millions_digits.txt")
+
+# filename = '/Users/nerve2009/Desktop/python_projects/python_crash_course/file_and_exceptions/pi_millions_digits.txt'
 
 with open(filename) as pi_file:
     pi_lines = pi_file.readlines()

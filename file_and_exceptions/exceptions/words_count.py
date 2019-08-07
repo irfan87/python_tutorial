@@ -18,7 +18,7 @@ def count_words(filename):
         print(f"The file {filename} has about {num_words} words.")
 
 filenames = [
-    '/Users/nerve2009/Desktop/python_projects/python_crash_course/file_and_exceptions/exceptions/alice.txt', 
+    '/Users/nerve2009/Desktop/python_projects/python_crash_course/file_and_exceptions/exceptions/alice.txt',
     '/Users/nerve2009/Desktop/python_projects/python_crash_course/file_and_exceptions/exceptions/siddhartha.txt',
     '/Users/nerve2009/Desktop/python_projects/python_crash_course/file_and_exceptions/exceptions/moby_dick.txt',
     '/Users/nerve2009/Desktop/python_projects/python_crash_course/file_and_exceptions/exceptions/little_women.txt'

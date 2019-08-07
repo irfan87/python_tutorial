@@ -1,5 +1,6 @@
-filename = '/Users/nerve2009/Desktop/python_projects/python_crash_course/file_and_exceptions/programming_polls.txt'
+import os
 
+filename = os.path.abspath("file_and_exceptions/programming_polls.txt")
 responses = []
 
 while True:
