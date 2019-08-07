@@ -1,4 +1,6 @@
-filename = '/Users/nerve2009/Desktop/python_projects/python_crash_course/file_and_exceptions/exceptions/alice.txt'
+import os
+
+filename = os.path.abspath("file_and_exceptions/exceptions/alice.txt")
 
 try:
     with open(filename, encoding='utf-8') as f:

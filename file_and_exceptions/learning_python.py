@@ -1,4 +1,6 @@
-filename = '/Users/nerve2009/Desktop/python_projects/python_crash_course/file_and_exceptions/learning_python.txt'
+import os
+
+filename = os.path.abspath("file_and_exceptions/learning_python.txt")
 
 print("Reading the file")
 with open(filename) as file_objects:

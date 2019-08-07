@@ -1,4 +1,6 @@
-filename = '/Users/nerve2009/Desktop/python_projects/python_crash_course/file_and_exceptions/pi_digits.txt'
+import os
+
+filename = os.path.abspath("file_and_exceptions/pi_digits.txt")
 
 with open(filename) as file_object:
     lines = file_object.readlines()

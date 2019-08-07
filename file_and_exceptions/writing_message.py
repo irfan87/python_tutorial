@@ -1,4 +1,6 @@
-filename = '/Users/nerve2009/Desktop/python_projects/python_crash_course/file_and_exceptions/programming.txt'
+import os
+
+filename = os.path.abspath("file_and_exceptions/programming.txt")
 
 with open(filename, 'w') as f:
     f.write("I love Programming so damn much!!\n")
